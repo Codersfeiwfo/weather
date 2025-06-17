@@ -1,52 +1,46 @@
-Weather Dashboard 🌤️
+# 🌤️ Weather Dashboard
+
 A JavaFX application that displays current weather by city using OpenWeatherMap API and stores the history in a local SQLite database.
 
-📷 Preview
-<img src="screenshot.png" width="500"/>
-🚀 Features
-🔍 Enter city name and get current weather (temperature & description)
+## 🚀 Features
 
-☁️ Real-time weather from OpenWeatherMap API
+- 🔍 Enter city name and get current weather (temperature & description)
+- ☁️ Real-time weather from OpenWeatherMap API
+- 💾 Save results to local SQLite database
+- 📋 Model class `WeatherRecord` for clean data handling
+- 🧪 JSON parsing using org.json
+- 🎨 Simple and responsive JavaFX GUI
 
-💾 Save results to local SQLite database
+---
 
-📋 Model class WeatherRecord for clean data handling
+## 🛠️ Technologies Used
 
-🧪 JSON parsing using org.json
+- ☕ Java 17+ / 21+ / 24
+- 🎨 JavaFX SDK 21+ or 24
+- 🗃️ SQLite (via JDBC driver)
+- 🧾 org.json (2024+)
+- 🌐 OpenWeatherMap API
 
-🎨 Simple and responsive JavaFX GUI
+---
 
-🛠️ Technologies Used
-Java 17+ / 21+ / 24
+## 📁 Project Structure
 
-JavaFX SDK 21+ or 24
-
-SQLite (via JDBC driver)
-
-org.json (2024+)
-
-OpenWeatherMap API
-
-📁 Project Structure
-graphql
-
-weather/
+weather-dashboard/
 │
 ├── lib/
-│   ├── json-20240303.jar
-│   └── sqlite-jdbc-3.43.2.2.jar
+│ ├── json-20240303.jar
+│ └── sqlite-jdbc-3.43.2.2.jar
 │
 ├── src/
-│   ├── Main.java            
-│   ├── WeatherAPI.java       
-│   ├── DatabaseManager.java   
-│   └── WeatherRecord.java     
+│ ├── Main.java
+│ ├── WeatherAPI.java
+│ ├── DatabaseManager.java
+│ └── WeatherRecord.java
 │
-├── weather.db                 
+├── weather.db # SQLite DB (created at runtime)
 ├── README.md
 └── .gitignore
-📄 WeatherRecord.java
-Represents a single weather record:
+
 
 ✅ How to Run
 Clone the repository:
@@ -58,20 +52,31 @@ Add your OpenWeatherMap API key in WeatherAPI.java:
 
 java
 private static final String API_KEY = "your_api_key_here";
-Make sure in IntelliJ:
+In IntelliJ:
 
 JavaFX SDK is added in Project Structure
 
 VM options contain:
-vbnet
+
+bash
 --module-path C:\Java\javafx-sdk-24.0.1\lib --add-modules javafx.controls,javafx.fxml
-sqlite-jdbc jar is added to the lib folder and project dependencies
+sqlite-jdbc JAR is in the lib/ folder and added to dependencies
 
 Run Main.java and enjoy!
 
 📌 To Do
-Add TableView to show history
-Add delete/clear history feature
+ Add TableView to show history
 
-Export data to CSV
-Handle edge cases (invalid city, no internet)
+ Add delete/clear history feature
+
+ Export data to CSV
+
+ Handle edge cases (invalid city, no internet)
+
+🧯 Common Errors
+❗ No suitable driver found for jdbc:sqlite — make sure sqlite-jdbc is added to Libraries and runtime
+
+❗ 401 Unauthorized — check that your API key is activated and valid
+
+❗ JavaFX window doesn’t open — double-check VM options and JavaFX SDK path
+
