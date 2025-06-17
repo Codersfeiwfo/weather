@@ -37,9 +37,8 @@ weather-dashboard/
 │ ├── DatabaseManager.java
 │ └── WeatherRecord.java
 │
-├── weather.db # SQLite DB (created at runtime)
 ├── README.md
-└── .gitignore
+
 
 
 ✅ How to Run
