@@ -26,15 +26,18 @@ A JavaFX application that displays current weather by city using OpenWeatherMap 
 ## 📁 Project Structure
 
 weather-dashboard/
-lib/
-json-20240303.jar
-sqlite-jdbc-3.43.2.2.jar
-src/
-Main.java
-WeatherAPI.java
-atabaseManager.java
-WeatherRecord.java
-README.md
+│
+├── lib/
+│ ├── json-20240303.jar
+│ └── sqlite-jdbc-3.43.2.2.jar
+│
+├── src/
+│ ├── Main.java
+│ ├── WeatherAPI.java
+│ ├── DatabaseManager.java
+│ └── WeatherRecord.java
+│
+├── README.md
 
 
 
