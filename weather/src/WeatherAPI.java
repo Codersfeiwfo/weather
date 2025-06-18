@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 public class WeatherAPI {
 
-    private static final String API_KEY = "0b87fb5cbad5c53d9eafb29b04e4000a";
+    private static final String API_KEY = "API";
 
     public static String getWeather(String city) {
         try {
